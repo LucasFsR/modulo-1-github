@@ -96,7 +96,7 @@ funcao impostoBrutoTotal(salario: real; servicos: real; gc: real) : real
 
 var
 
-salarioMensal, imposto1, imposto2, imposto3, impostoFinal: real
+salarioMensal, impostoA, impostoB, impostoC, impostoFinal: real
 
 
 
@@ -105,25 +105,25 @@ inicio
 salarioMensal <- salario / 12
 
 se (salarioMensal < 3000) entao
- imposto1 <- 0
+ impostoA <- 0
 senao
  se (salarioMensal >= 3000) e (salarioMensal < 5000) entao
-  imposto1 <- salario * 0.1
+  impostoA <- salario * 0.1
  senao
-  imposto1 <- salario * 0.2
+  impostoA <- salario * 0.2
  fimse
 fimse
 
 se (servicos <= 0) entao
- imposto2 <- 0
+ impostoB <- 0
 senao
- imposto2 <- servicos * 0.15
+ impostoB <- servicos * 0.15
 fimse
 
 se (gc <= 0) entao
- imposto3 <- 0
+ impostoC <- 0
 senao
- imposto3 <- gc * 0.2
+ impostoC <- gc * 0.2
 fimse
 
 impostoFinal <- imposto1 + imposto2 + imposto3
